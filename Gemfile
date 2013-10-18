@@ -1,9 +1,17 @@
 source 'https://rubygems.org'
 
-gem 'serve', '1.5.2', git: 'git://github.com/danielstutzman/serve.git'
+gem 'activerecord', '~> 4.0', require: 'active_record'
+gem 'activerecord-postgresql-adapter'
 
-# for Rails form helpers
-gem 'actionpack', '~> 4.0.0', require: 'action_view'
+gem 'standalone_migrations',
+  git: 'https://github.com/thinkerbot/standalone-migrations',
+  branch: 'rails4.0.0', ref: '55767'
 
-gem 'rack-piwik', git: 'git://github.com/danielstutzman/rack-piwik.git'
-#gem 'rack-piwik', path: '/Users/daniel/dev/rack-piwik'
+gem 'sinatra'
+gem 'actionpack', require: 'action_view' # for Rails form helpers
+gem 'dynamic_form' # for error_messages_for
+
+gem 'rack-flash3', require: 'rack-flash'
+gem 'sinatra-footnotes'
+gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'will_paginate', '~> 3.0.0'

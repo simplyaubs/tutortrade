@@ -8,21 +8,6 @@ rescue Bundler::BundlerError => e
   exit e.status_code
 end
 
-require 'serve'
-require 'serve/rack'
-require 'action_view' # for Rails form helpers
+require './controller.rb'
 
-# The project root directory
-root = ::File.dirname(__FILE__)
-
-require 'rack/piwik'
-use Rack::Piwik, piwik_url: "http://www.davincicoders2013.info/analytics/"
-
-# Other Rack Middleware
-use Rack::ShowStatus      # Nice looking 404s and other messages
-use Rack::ShowExceptions  # Nice looking errors
-
-run Rack::Cascade.new([
-  Serve::RackAdapter.new(root + '/views'),
-  Rack::Directory.new(root + '/public')
-])
+run Sinatra::Application
