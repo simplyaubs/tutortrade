@@ -1,0 +1,26 @@
+<style media="screen" type="text/css">
+	body {
+  width: 760px;
+  margin: 20px auto;
+  background-color: white;
+  border: 3px #ccc solid;
+  padding: 30px;
+  font-family: sans-serif;
+  font-size: 16pt;
+}
+</style>
+
+<h1>Tutor: <%= @user.first_name %> <%= @user.last_name %></h1>
+
+<img class="img-circle" src="/images/<%= @user.tutor_pic %>">
+
+<br>
+<br>
+
+<p>Major: <%= @user.major %></p>
+
+<p>Year: <%= @user.year %></p>
+
+<p>Tutors: <%= @user.subject %></p>
+
+<p>Bio: <%= @user.bio %></p>
