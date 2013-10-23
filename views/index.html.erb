@@ -16,7 +16,7 @@
             <li><a href="#about">About</a></li>
      
             <li><a href="#tutors">Tutors</a></li>
-           
+            
           </ul>
           
         </div><!--/.navbar-collapse -->
@@ -46,7 +46,15 @@
         <div class="col-lg-4">
           <h2>Tutor Profiles</h2>
           <p>So now you are convinced that you need a tutor. Now what? Well, why don't you peruse our tutor's profiles to find someone to help you out? You might even learn a thing or two about them. Or even find that you have a few things in common.</p>
-          <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+          <!-- <p><a class="btn btn-default" href="#">View details &raquo;</a></p -->>
+          <% User.order(:id).each do |user| %>
+      <td>
+        <a href="/tutors/<%= user.id %>">Tutor</a>
+      </td>
+      <% end %>
+
+
+
        </div>
         <div class="col-lg-4">
           <h2>Get A Tutor Now!</h2>
