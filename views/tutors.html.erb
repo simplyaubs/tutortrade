@@ -1,0 +1,44 @@
+<style media="screen" type="text/css">
+	body {
+  width: 760px;
+  margin: 20px auto;
+  background-color: white;
+  border: 3px #ccc solid;
+  padding: 30px;
+  font-family: sans-serif;
+  font-size: 16pt;
+}
+	h1 {
+		background-color: black;
+		color: white	;
+	}
+</style>
+
+<h1>Tutors</h1>
+
+ <table class="table">
+  <% @tutors.each do |t| %>
+   
+    <tr>
+      <td><%= t.first_name %></td>
+      <td><%= t.last_name %></td>
+      <td><%= t.subject %></td>
+      <td><%= t.major %></td>
+      <td>
+        <a href="/tutors/<%= t.id %>">Show Profile</a>
+      </td>
+      </tr>
+      <% end %>
+      <tr>
+        <td><%= text_field_tag "first_name", "", placeholder: "First Name", size: 8 %></td>
+        <td><%= text_field_tag "last_name", "", placeholder: "Last Name", size: 8 %></td>
+        <td><%= text_field_tag "subject", "", placeholder: "Subject", size: 6 %></td>
+        <td><%= text_field_tag "major", "", placeholder: "Major", size:20 %></td>
+        <td><%= submit_tag "Sign Up" %></td>
+      </tr>
+     
+  
+  </table>
+
+<br>
+<br>
