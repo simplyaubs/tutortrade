@@ -15,7 +15,7 @@
             <li class="active"><a href="#">Home</a></li>
             <li><a href="#about">About</a></li>
      
-            <li><a href="#tutors">Tutors</a></li>
+            <li><a href="/tutors">Tutors</a></li>
             
           </ul>
           
@@ -39,21 +39,14 @@
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-lg-4">
-          <h2>Who We Are</h2>
+          <h2>How This Works</h2>
           <p>We are some awesome individuals. I mean really, what else do you need to know? You want more? Ok. Our Tutors are top notch and experts in their fields. If you find yourself in need of help, you've come to the right place.</p>
           <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
         </div>
         <div class="col-lg-4">
           <h2>Tutor Profiles</h2>
           <p>So now you are convinced that you need a tutor. Now what? Well, why don't you peruse our tutor's profiles to find someone to help you out? You might even learn a thing or two about them. Or even find that you have a few things in common.</p>
-          <!-- <p><a class="btn btn-default" href="#">View details &raquo;</a></p -->>
-          <% User.order(:id).each do |user| %>
-      <td>
-        <a href="/tutors/<%= user.id %>">Tutor</a>
-      </td>
-      <% end %>
-
-
+          <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
 
        </div>
         <div class="col-lg-4">
