@@ -26,6 +26,10 @@ post "/tutors" do
 	redirect "/thankyou"
 end
 
+get "/about" do
+	halt erb(:about)
+end
+
 get "/thankyou" do
 	halt erb(:thankyou)
 end
